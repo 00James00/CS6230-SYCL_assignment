@@ -298,11 +298,11 @@ int main(int argc, char* argv[]) {
       // sycl::accessor outAccessor{outBuf, cgh1, sycl::write_only};
       // Allow full access but only write to the 3rd channel?
       auto inAccessor = inBuf.get_access<sycl::access::mode::read>(
-        cgh3, sycl::range(0, 1566)
+        cgh3, sycl::range(522, 1566)
         // sycl::id(0, 1044)
       );
       auto outAccessor = outBuf.get_access<sycl::access::mode::write>(
-        cgh3, sycl::range(0, 1536)
+        cgh3, sycl::range(512, 1536)
         // sycl::id(0, 1024)
       );
       sycl::accessor filterAccessor{filterBuf, cgh3, sycl::read_only};
